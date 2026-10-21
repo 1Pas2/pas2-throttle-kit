@@ -1,0 +1,47 @@
+{
+  "name": "@1pas2/throttle-kit",
+  "version": "0.1.0",
+  "description": "Throttle synchronous callbacks with explicit trailing behavior.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "author": "1Pas2",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1Pas2/pas2-throttle-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/1Pas2/pas2-throttle-kit/issues"
+  },
+  "homepage": "https://github.com/1Pas2/pas2-throttle-kit#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "check:examples": "tsc -p tsconfig.examples.json",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "24.10.1"
+  }
+}
